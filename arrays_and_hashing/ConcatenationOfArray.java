@@ -6,7 +6,7 @@ package arrays_and_hashing;
  *  // i = 0
     // j = n - 1
  */
-
+// Solution 1
 public class ConcatenationOfArray {
   public int[] getConcatenation(int[] nums){
     int n =  nums.length;  
