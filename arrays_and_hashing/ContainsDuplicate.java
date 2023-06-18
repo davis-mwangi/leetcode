@@ -4,8 +4,7 @@
 
 //Time Complexity : O(n)
 //Space Complexity:  O(n)
-
-import java.lang.*;
+package arrays_and_hashing;
 
 class Solution {
     public boolean containsDuplicate(int[]nums){
