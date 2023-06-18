@@ -1,7 +1,9 @@
 package arrays_and_hashing;
 
 import java.util.HashMap;
-
+/**
+ * https://leetcode.com/problems/two-sum/description/
+ */
 public class TwoSum {
     // nums = [1,6,3,7,7]
     // target = 9
