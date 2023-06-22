@@ -6,6 +6,7 @@ package arrays_and_hashing;
  */
 public class CanPlaceFlowers {
     
+    
     public boolean canPlaceFlowers(int[] flowerbed, int n ) {
         
         int len = flowerbed.length;
