@@ -12,7 +12,7 @@ import java.util.Stack;
 
  //Time Complexity: O(n*m)
  //Space Complexity: O(n)
- //Monotonic Decreasing stack
+ //Monotonic Decreasing Stack
 public class MajorityElement1 {
     public int[] nextGreaterElement(int[] nums1, int[] nums2) {
         // Map nums1 array to index
