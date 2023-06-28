@@ -25,12 +25,14 @@ public class NumArray {
 
 //Solution 2:
 //Optimized Solution using a prefix sum array
+//Time Complexity: O(n)
+//Space Complexity: O(1)
 public class NumArray {
     private int [] prefixSum;
   
     public NumArray(int[] nums) {
         int n = nums.length;
-        this.prefixSum = new int[n];
+        this.prefixSum = nums;
 
         int leftSum = 0;
 
