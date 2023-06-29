@@ -47,7 +47,6 @@ public class ProductArrayExceptSelf {
             result[i] =  pre;
             pre *=  nums[i];
         }
-        System.out.println(Arrays.toString(result));
         int pos = 1;
         for(int i = n-1; i >= 0; i--){
             result[i] *= pos;
