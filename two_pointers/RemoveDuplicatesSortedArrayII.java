@@ -10,6 +10,8 @@ package two_pointers;
  */
 public class RemoveDuplicatesSortedArrayII {
 
+    //Time Complexity: O(n)
+    //Space Complexity: O(1)
     public int removeDuplicates(int [] nums){
         int  i  = 0;
         for(int el : nums){
