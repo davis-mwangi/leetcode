@@ -3,6 +3,9 @@ package two_pointers;
 /**
  * (HARD)
  * https://leetcode.com/problems/trapping-rain-water/description/
+ * 
+ * Solution Guide: Code With Arisha : https://www.youtube.com/watch?v=Lrp9v-NQPXw
+ *                 Neetode: https://www.youtube.com/watch?v=ZI2z5pq0TqA
  */
 public class TrappingRainWallet {
 
