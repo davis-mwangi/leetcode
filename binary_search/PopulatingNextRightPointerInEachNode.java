@@ -4,6 +4,10 @@ package binary_search;
  * 
  * Guide: Neetcode 
  *       https://www.youtube.com/watch?v=U4hFQCa1Cq0
+ * 
+ * First option is to use BFS, but we can use BFS approach in a better,
+ * by ensuring we link the nodes before proceeding to the next level iteration.
+ *
  */
 public class PopulatingNextRightPointerInEachNode {
 
