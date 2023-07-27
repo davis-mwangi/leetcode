@@ -1,7 +1,7 @@
 package binary_search;
 import java.util.*;
 /**
- * 
+ * https://leetcode.com/problems/squares-of-a-sorted-array/description/
  */
 public class SquaresOfASortedArray {
      
