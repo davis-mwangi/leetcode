@@ -2,7 +2,8 @@ package linked_list;
 /**
  * https://leetcode.com/problems/remove-linked-list-elements/description/
  * 
- * 
+ * Time Complexity: O(n)
+ * Space Complexity: O(1)
  */
 public class RemoveLinkedListElements {
     public ListNode removeElements(ListNode head, int val) {
