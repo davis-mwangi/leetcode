@@ -1,6 +1,6 @@
 package linked_list;
 /**
- * 
+ * https://leetcode.com/problems/design-browser-history/description/
  */
 public class DesignBrowserHistory {
     static class ListNode {
