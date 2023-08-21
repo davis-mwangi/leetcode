@@ -37,7 +37,7 @@ public class InsertIntoABinarySearchTree {
                     curr.left =  new TreeNode(val);
                     return root;
                 }
-                curr.left =  root;
+                curr = curr.left;
             }
         }
         return root;
