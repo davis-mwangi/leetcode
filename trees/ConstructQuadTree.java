@@ -2,6 +2,9 @@ package trees;
 
 /**
  * https://leetcode.com/problems/construct-quad-tree/
+ * 
+ * //Time Complexity: O(n ^ 2) * O(log) since every level we divide the value by 2  unti n =  1, This will be log n,
+ *   At each level we check if all the values has ones or zeros this will be n * n ~ n^2 
  */
 public class ConstructQuadTree {
     
