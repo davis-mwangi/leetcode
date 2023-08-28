@@ -3,7 +3,9 @@ import java.util.*;
 /* 
 https://leetcode.com/problems/maximum-width-of-binary-tree/description/
 
-
+We use heap concept where the top most will be the root and  left value is x * 2 and right x * 2 + 1
+we maintain an object of {node, number, level},
+Every time we get into new level we update the num n level
 */
 public class MaximumWidthOfBinaryTree {
 
