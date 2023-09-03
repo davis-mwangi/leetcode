@@ -4,6 +4,8 @@ import java.util.*;
 /*
 https://leetcode.com/problems/operations-on-tree/
 
+YouTube: https://www.youtube.com/watch?v=qK4PtjrVD0U
+Related Question: https://leetcode.com/problems/throne-inheritance/description/
 */
 public class OperationsOnTree {
 
