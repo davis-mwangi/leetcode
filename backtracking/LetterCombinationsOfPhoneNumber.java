@@ -6,6 +6,9 @@ import java.util.List;
 
 /*
  * https://leetcode.com/problems/letter-combinations-of-a-phone-number/
+ * 
+ * TimComplexity: O(n * 4 ^ n ) Every stage in decision tree we can make at max 4 , s
+ * since a digit has 4 chars max, and the height of tree is length of digits string
  */
 public class LetterCombinationsOfPhoneNumber {
      public List<String> letterCombinations(String digits) {
