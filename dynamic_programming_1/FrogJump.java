@@ -3,7 +3,8 @@ package dynamic_programming_1;
 /*
  https://www.codingninjas.com/studio/problems/frog-jump_3621012
 
-
+Source:  Conding Ninjas
+Youtube : Take you forward
  
  */
 import java.util.* ;
