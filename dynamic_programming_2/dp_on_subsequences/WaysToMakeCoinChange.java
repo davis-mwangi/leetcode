@@ -116,4 +116,39 @@ public class WaysToMakeCoinChange {
         }
         
     }
+
+    //Space Optmized
+    //SC: O(target)
+    //TC: O(N * target)
+    public class Solution4 {
+
+        public static long countWaysToMakeChange(int denominations[], int value){
+            //write your code here
+            int n = denominations.length;
+            long[] prev = new long [value + 1];	
+    
+            //Base Case
+            for(int t = 0; t  <= value; t++){
+                prev[t] = (t % denominations[0]== 0) ? 1L  : 0L;
+            }
+            for(int  i = 1; i < n ; i++){
+                long [] curr = new long [value +1];
+                for(int t = 0;  t <= value; t++){
+                    
+                    long dontTake = prev[t];
+        
+                    long take  = 0;
+                    //Only take if less or equal to the target
+                    if(denominations[i] <= t){
+                        take  = curr[ t - denominations[i] ];
+                    }
+                    curr[t] = dontTake + take;
+                }
+                prev =  curr;
+            }
+            return prev[value];
+    
+        }
+        
+    }
 }
