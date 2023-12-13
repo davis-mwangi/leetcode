@@ -1,5 +1,7 @@
 package dynamic_programming_2.dp_on_strings;
 /*
+https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqa1V4TERJVWM2eUJCOU1Sem94Yy05QkNHNzZGZ3xBQ3Jtc0trNmIwa0xDdVlrTGdYaEx0STBRc3VHZ25kRWlvN0pzZU5RNHNCVzlvTTdHT0pOc25qT3pKMHNzYXZXT2dZWnh6TTNOeXRNZmVJSDJxRG9oTWtRRWhEUWJGcHVpV0JxemtSUU5VWUdEVmU0bWV3U2NzOA&q=https%3A%2F%2Fbit.ly%2F3H2ZtGP&v=xPBLEj41rFU
+
 To determine min insertions we can just determine  the longest palindromic subsequence,
 Once we have that we can then get the min by
  min =  n  - longest_palindromic_subsequence
