@@ -62,10 +62,12 @@ public class LongestIncreasingSubsequence {
 
     }
 
+//---------------------------------------------Memoized Recursive Solution--------------------------------------------------------------------
+
     // Memoized Solution
     // TC: O(N * N)
     // SC: O(N *N) + O(N)
-    public class Solution {
+    public class Solution4 {
 
         public static int longestIncreasingSubsequence(int arr[]) {
             // Your code goes here
@@ -104,7 +106,39 @@ public class LongestIncreasingSubsequence {
         }
 
     }
+//---------------------------------------------Bottom-Up Solution--------------------------------------------------------------------
+       //Top-down approach
+    //TC: O(N * N)
+    //SC: O(N * N)
+    public class Solution3 {
 
+        public static int longestIncreasingSubsequence(int arr[]) {
+            //Your code goes here
+            int n =  arr.length;
+            int[][]dp= new int[n+1][n+1];
+            
+            for(int  index = n-1; index >=0 ; index--){
+    
+                for(int prevIndex = index-1; prevIndex>=-1; prevIndex--){
+                   
+                    int len = 0 +  dp[index + 1][prevIndex +1];
+            
+                    if(prevIndex == -1 ||  arr[index] > arr[prevIndex] ){
+                            int take = 1 + dp[index + 1][index+1];  
+                            len =  Math.max(take,len);
+                    }
+    
+                    dp[index][prevIndex +1] = len;
+                }
+            }
+    
+            return  dp[0][-1 +1];
+    
+        }
+    
+    
+    }
+//---------------------------------------------LIS Solution using Binary Search--------------------------------------------------------------------
     // Solve using Binary Search
     // TC: O(N * log N)
     // SC: O()
@@ -149,5 +183,34 @@ public class LongestIncreasingSubsequence {
             return (left > right) ? left : right;
         }
     }
+
+//---------------------------------------------Algorithmic Solution--------------------------------------------------------------------
+public class Solution5 {
+
+    //Using Algorithm
+	public static int longestIncreasingSubsequence(int arr[]) {
+		//Your code goes here
+		int n = arr.length;
+        int[] dp = new int[n];
+		
+		Arrays.fill(dp, 1);
+
+		int maxi = 0;
+		for(int i = 0; i < n; i++){
+			for(int prev = 0; prev < i; prev++){
+				if(arr[i] > arr[prev]){
+					int newLen =  dp[prev] + 1;
+					dp[i] = Math.max(dp[i], newLen);
+				}
+			}
+			maxi = Math.max( dp[i], maxi);
+		}
+		return  maxi;
+
+	}
+
+
+}
+
 
 }
