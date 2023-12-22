@@ -1,7 +1,7 @@
 package dynamic_programming_2.dp_on_lis;
 /*
 Coding Ninjas: https://www.codingninjas.com/studio/problems/number-of-longest-increasing-subsequence_3751627?source=youtube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos&leftPanelTabValue=PROBLEM
-
+Leetcode: https://leetcode.com/problems/number-of-longest-increasing-subsequence/
 
 Algorithm:
    Using LIS Algorithm
