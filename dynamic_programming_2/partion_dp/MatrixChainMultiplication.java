@@ -25,14 +25,14 @@ Algorithm:
     
 
 */
-import java.util.* ;
+import java.util.*;
 
 public class MatrixChainMultiplication {
 
-
-    //TC: O(N * N) *  ~(N) => O(N^3)
-    //SC:  O(N * N)
-    public class Solution {
+    // TC: O(N * N) * ~(N) => O(N^3)
+    // SC: O(N * N)
+    // Memoized Solution
+    public class Solution1 {
         public static int matrixMultiplication(int[] arr, int N) {
 
             // Write your code here
@@ -68,6 +68,43 @@ public class MatrixChainMultiplication {
             for (int[] a : arr) {
                 Arrays.fill(a, val);
             }
+        }
+    }
+
+    // Tabulation Method
+    //TC: O((N ^ 3))
+    //SC: O(N * N)
+    class Solution2 {
+
+        public static int matrixMultiplication(int[] arr, int N) {
+
+            // Write your code here
+            int[][] dp = new int[N][N];
+
+            // Base Case
+            for (int i = 0; i < N; i++) {
+                dp[i][i] = 0;
+            }
+
+            // Recurrence
+            for (int i = N - 1; i >= 1; i--) {
+                for (int j = i + 1; j < N; j++) {
+
+                    int min = (int) Math.pow(10, 9);
+
+                    for (int k = i; k < j; k++) {
+
+                        int steps = arr[i - 1] * arr[k] * arr[j] +
+                                dp[i][k] + dp[k + 1][j];
+
+                        if (steps < min) {
+                            min = steps;
+                        }
+                    }
+                    dp[i][j] = min;
+                }
+            }
+            return dp[1][N - 1];
         }
     }
 }
