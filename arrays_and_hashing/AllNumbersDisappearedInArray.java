@@ -2,6 +2,16 @@ package arrays_and_hashing;
 /**
  * https://leetcode.com/problems/find-all-numbers-disappeared-in-an-array/description/
  * 
+ * Solution 1:
+ *     Using a set , add numbers 1 -> n 
+ *     run  through provided nums and remove them from set, the remaining ones are the missing ones
+ * Solution 2 (Optimal):
+ *    Since numbers are positive and are 1 -> n, we can use indexes of the array to denote a number is present
+ *    we just reduce by 1, to make it fit 0 - indexed array , i.e 0 -> n-1,
+ *    we iterate through numbers  marking their respective indexes as -ves, at the end we get the values that are not -ve,
+ *     that means the numbers are not present in the array.
+ * 
+ *     
  */
 
  import java.util.*;
