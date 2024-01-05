@@ -1,6 +1,14 @@
 package arrays_and_hashing;
 /**
  * https://leetcode.com/problems/first-missing-positive/description/
+ * 
+ * We can use the analogy of  mum with 5 children, each are requested to sit aon the appropriate  chair 
+ *  labelled their respective names, once they sit we can easily identify who is missing
+ * 
+ * 
+ * Youtube Ref: https://www.youtube.com/watch?v=aBhla9jSAeg (Code with Alisha)
+ * 
+ * 
  */
 //Time Complexity : O(3.n) ~O(n)
 //Space Complexity: O(1)
