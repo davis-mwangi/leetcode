@@ -3,6 +3,13 @@ import java.util.*;
 /**
  * 
  * https://leetcode.com/problems/find-all-anagrams-in-a-string/description/
+ * 
+ * Algorithm:
+ * 
+ *    Create 2 HashMap one with the small and other larger string with char: count map,
+ *     Iterate through the larger string every time removing a character and adding a new character or count.
+ *      If  both maps are equal at a given point then they are anagrams, so we add to the result
+ *     
  */
 
 // Time Complexity:  O(m) + (n)
