@@ -1,6 +1,13 @@
 package arrays_and_hashing;
 /**
  * https://leetcode.com/problems/longest-consecutive-sequence/
+ * 
+ * Algorithm:
+ *    We can use a set and add all nums in the set,
+ *      we run through numbers, we check if there is preceeding number less than number, 
+ *        else we start the count by incrementing by one untill all nums are exhausted.
+ *         we get the longest
+ *   
  */
 import java.util.*;
 
