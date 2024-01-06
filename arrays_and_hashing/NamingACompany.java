@@ -15,6 +15,8 @@ package arrays_and_hashing;
  *            (size of set A -  intersection) *  (size of B  - intersection)
  *      we add to result;
  *   
+ *     SC: O(26 * N ) // 26 characters and in case all  ideas fit in one hasmap
+ *     TC: O(26 * 26 * N)
  */
 import java.util.*;
 
