@@ -6,6 +6,11 @@ package binary_search;
  * Run binary search and obtain the furthest index to the right
  * Rum another binary search and obtain the further index to the left
  * 
+ * 
+ * Whenever we find target, we can have 2 cases left bias and right bias, such that if left biase will continue looking for
+ * the target in the left and if right bias we look the value to the furthest of right
+ * 
+ * 
  * This  will be 2 * O(log n)
  * //5,7,7,8,8,8,8,10
     //l      m     r
