@@ -188,6 +188,16 @@ public class LongestIncreasingSubsequence {
 public class Solution5 {
 
     //Using Algorithm
+
+    /*
+     dp[i] represents the longest increasing subsequence up to that point
+    [5, 4, 11, 1, 16, 8] by default all with have LIS of 1
+     at given dp[i] check  how many subsequences from 0 to that point if you find,
+     the prev subsequence plus  curr is greater you can update, at the end pick the dp[i]
+     with highest max number
+
+
+    */
 	public static int longestIncreasingSubsequence(int arr[]) {
 		//Your code goes here
 		int n = arr.length;

@@ -1,6 +1,10 @@
 package dynamic_programming_2.dp_on_subsequences;
 
 /*
+
+https://www.codingninjas.com/studio/problems/subset-sum-equal-to-k_1550954?leftPanelTab=1%3Fsource%3Dyoutube&campaign=striver_dp_videos&utm_source=youtube&utm_medium=affiliate&utm_campaign=striver_dp_videos
+
+Take U Forward :  DP 14
 1) Express in terms of index and target
 2) Explore possibilities of that index
  arr[index] part of the subsequence or 

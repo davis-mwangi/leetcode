@@ -3,7 +3,7 @@ package dynamic_programming_2.dp_on_lis;
 Leetcode: https://leetcode.com/problems/longest-increasing-subsequence/description/
 YT: https://www.youtube.com/watch?v=IFfYfonAFGc&list=PLgUwDviBIf0qUlt5H_kiKYaNSqJ81PMMY&index=43
 
-
+To print longest increasing subsequence, we can  get the tabulation first of the  LIS then print the figures backswards,
 */
 import java.util.*;
 

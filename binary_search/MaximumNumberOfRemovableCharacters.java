@@ -13,6 +13,59 @@ package binary_search;
  */
 public class MaximumNumberOfRemovableCharacters {
 
+    //Bruteforce Solution
+    class Solution {
+        /*
+         s = *a *b c *a  c  b
+              0  1 2  3  4  5
+            -1  -1 c -1  c  b
+    
+         p = ab
+        
+         p is a subsquence of s
+    
+         removable= [3, 1, 0]
+                    |<--k-->|
+          removing k characters
+          removed= 2
+    
+          TC:  k * len(s)
+          SC: 1
+    
+        */
+        public int maximumRemovals(String s, String p, int[] removable) {
+           
+            StringBuilder sb = new StringBuilder(s);
+            int count = 0;
+            for(int i = 0; i < removable.length; i++){
+                int idx = removable[i];
+                sb.setCharAt(idx, '1');
+                boolean isSubSeq = checkIfSubseq(sb.toString(), p);
+                if(isSubSeq){
+                   count += 1; 
+                }else{
+                    break;
+                }
+            }  
+            return count; 
+        }
+    
+        private boolean checkIfSubseq(String big, String small){
+            int i = 0;//big
+            int j = 0; // small
+            while(i < big.length() && j <  small.length()){
+                if(big.charAt(i) == small.charAt(j)){
+                    j++;
+                }
+                i++;
+            }
+            return small.length() == j;
+    
+        }
+    }
+
+    class Solution1 { 
+
     public int maximumRemovals(String s, String p, int[] removable) {
         int left = 0;
         int right = removable.length - 1;
@@ -49,5 +102,6 @@ public class MaximumNumberOfRemovableCharacters {
             i2 += 1;
         }
         return i2 >= subseq.length();
-     }
+      }
+    }
 }
