@@ -1,5 +1,7 @@
 package dynamic_programming_2.dp_on_strings;
 /*
+https://www.codingninjas.com/studio/problems/longest-common-substring_1235207?
+
 Example:  
 str1 = "abcjklp" str2 = "ackkp"
 

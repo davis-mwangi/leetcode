@@ -1,5 +1,8 @@
 package dynamic_programming_2.dp_on_strings;
 /*
+Leetcode: https://leetcode.com/problems/longest-palindromic-subsequence/description/
+Coding Ninjas : https://www.codingninjas.com/studio/problems/longest-palindromic-subsequence_842787
+
 We use Longest common subsequence, but since here we checking for palindromic subsequence,
 we reverse the string and then use subsequence algorithm
 to get the longest
