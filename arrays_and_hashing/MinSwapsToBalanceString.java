@@ -5,16 +5,21 @@ import java.util.*;
 /**
  * https://leetcode.com/problems/minimum-number-of-swaps-to-make-the-string-balanced/description/
  * 
- * Formulae result = (count + 1 ) / 2
- * 
- * Algorithm:
- *    Keep track of how many extra closing brackets ,
- *       - whenever we find  a closing bracket we add 1 and for opening we -1
- *    - we also keep track of maximum closing bracket 
- * 
- *     One observation is if we perform one swap E.g on ]]] | [[[ ==> []] | ][] the extra closing brakets
- *     will be reduced by 2, since each the brackets cancels each other from 3 not its  1 
- *     If we do another swap []]][]  ==> [][][]   1 - 2 = 0 
+ 
+**** Intuition ****
+Since at a given point, if the closing brackets are more than the open brackets, the string will not be balanced, so perform a swap whenever closing becomes more than the open brackets
+
+**** Approach ****
+Maintain counts of closing brackets, open brackets and swaps count,
+We wont do manual swap but rather increment the swap count.
+
+We iterate throught the string of brackets,
+
+Whenever we find an open bracket "[" we increament open count by 1 and likewise, if we get a closing bracket "]" we increment the closing brackets counter by 1.
+
+If closing brackets becomes more than the open , we increment swap, since a swap will be done to balance the brackets and then we reduce the closing by 1 and increase the open count 1.
+
+At the end we return how many swaps has been made for the entire
  * 
  * 
  */
