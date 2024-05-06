@@ -3,7 +3,7 @@ package Neetcode_450_Questions;
 /*
 https://leetcode.com/problems/same-tree/description/
 */
-public class SameTree_Easy_LC {
+public class SameTree_Easy_LC100 {
 
     // Definition for a binary tree node.
     public class TreeNode {
