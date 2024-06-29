@@ -1,4 +1,5 @@
 package trees;
+
 /*
 
 Question : https://leetcode.ca/all/1650.html
@@ -11,6 +12,7 @@ Given two nodes of a binary tree p and q, return their lowest common ancestor (L
 Each node will have a reference to its parent node. The definition for Node is below:
 */
 import java.util.*;
+
 public class LowestCommonAncestorOfaBinaryTreeIII_LC1650 {
     class Node {
         public int val;
@@ -18,8 +20,9 @@ public class LowestCommonAncestorOfaBinaryTreeIII_LC1650 {
         public Node right;
         public Node parent;
     }
-   // TC : O(N)
-   // SC : O(N)
+
+    // TC : O(N)
+    // SC : O(N)
     public Node lowestCommonAncestor(Node p, Node q) {
         Set<Node> set = new HashSet<Node>();
         Node temp = p;
@@ -36,23 +39,48 @@ public class LowestCommonAncestorOfaBinaryTreeIII_LC1650 {
         }
         return temp;
     }
-   
-    // SC : O(1)
+
+    // SC : O(1) ~ O(N) Auxiliary stack space
     // TC : O(N)
     /*
-   Move up to the parent if , it becomes null reset to the  other node,
-   This will ensure they travel up the same distance to get to the parent node
+     * Move up to the parent if , it becomes null reset to the other node,
+     * This will ensure they travel up the same distance to get to the parent node
+     * 
+     */
+    // Solution 2:
 
-    */
     public Node lowestCommonAncestor2(Node p, Node q) {
-       Node pCopy = p;
-       Node qCopy = q;
+        // Checks
+        if (p == null || q == null) {
+            return null;
+        }
+        Node curr = p;
+        // Move up until you reach the parent
+        while (curr.parent != null) {
+            curr = curr.parent;
+        }
 
-       while(p != null && q != null){
-           p =  p.parent == null ? qCopy : p.parent;
-           q =  q.parent == null ? pCopy : q.parent;
-       }
-       return pCopy;
+        return find(p, q, curr);
+    }
+
+    private Node find(Node p, Node q, Node root) {
+        if (root == null) {
+            return null;
+        }
+        if (p == root || q == root) {
+            return root;
+        }
+
+        Node left = find(p, q, root.left);
+        Node right = find(p, q, root.right);
+
+        // Post Order
+        // Both return a value
+        if (left != null && right != null) {
+            return root;
+        }
+        // Either, left or right return a value
+        return left == null ? right : left;
     }
 
 }
