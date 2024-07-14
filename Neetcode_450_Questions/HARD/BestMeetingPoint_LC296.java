@@ -33,6 +33,8 @@ APPROACH:
     Calculate min distance
        -  Calculate the manhattatan distance from the medium col and row,   
 
+TC:  3 * O(M * N) ~ O(N*M)
+SC : 3 * O(M*N) if all spaces has a house ~ O(M*N)       
 */
 import java.util.*;
 
